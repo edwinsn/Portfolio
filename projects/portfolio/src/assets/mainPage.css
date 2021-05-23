@@ -28,7 +28,7 @@ header{
   margin:0 2% 0 2%;
   text-decoration: none;
   color: black;
-  font-size: 1.65rem;
+  font-size: 1.55rem;
 }
 
 .headerSpace{
@@ -56,6 +56,10 @@ header{
 .introduction >*{
   margin: 0 7%;
   display: inline;
+}
+
+.introduction > div > div:nth-child(2){
+  line-height: 2.1rem;
 }
 
 .name{
@@ -91,7 +95,7 @@ header{
 }
 
 .presentation{
-  font-family: roboto, sans-serif;
+  font-family: Roboto, sans-serif;
   font-size: 1.2rem;
 }
 

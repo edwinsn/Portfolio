@@ -28,7 +28,8 @@ export let MainPage = function () {
                             </a>
                         </div>
                         <div>Hi, I'm <span className="name">Edwin Sáchez</span>,<br /> web developer.</div>
-                        <div className="presentation" >I think we can make a <span className="yellow">big</span>impact through code.</div>
+                        <div className="presentation" >I think we can make a <span className="yellow">big</span> impact through code.</div>
+                        <button>Write me</button>
                     </div>
                 </div>
                 <div>

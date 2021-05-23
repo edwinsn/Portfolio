@@ -17,7 +17,7 @@ section{
 
 }
 
-section > div{
+section:nth-child(5) > div{
   height: 100vh;
 }
 
@@ -76,6 +76,7 @@ section > div{
 
 .progres>a{
   color: white;
+
 }
 .wrapwithBackground1{
   flex-basis: 450px;
