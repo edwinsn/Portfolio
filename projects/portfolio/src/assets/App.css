@@ -1,0 +1,88 @@
+body{
+  margin: 0;
+  color: white;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none; 
+  scrollbar-width: none;  
+}
+
+section{
+  min-height: 100vh;
+
+}
+
+section > div{
+  height: 100vh;
+}
+
+
+.App{
+  background-size:cover ;
+  overflow-x: hidden;
+}
+
+.backGround{
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  z-index: -1;
+  flex-flow: wrap-reverse;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.backGround0{
+  background-color: black;
+  height: 700vh;
+  width: 1fr;
+  flex-grow: 1;
+  min-width: 235px;
+}
+
+.backGround1{
+  background-color: black;
+  height: 700vh;
+  flex-basis: 1fr;
+  flex-grow: 50;
+  min-width: 234px;
+}
+
+.backGround2{
+  background-color: white;
+  height: 10vh;
+  flex-basis: 450px;
+  flex-grow: 1;
+  z-index: 4;
+}
+
+.progres{
+  position: fixed;
+  right: 2%;
+  top:40%;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-family: 'Pattaya';
+  font-size: large;
+}
+
+.progres>a{
+  color: white;
+}
+.wrapwithBackground1{
+  flex-basis: 450px;
+  flex-grow: 1;
+}
+.wrapwithBackground2{
+  flex-grow: 50;
+  min-width: 234px;
+  flex-basis: 1fr;
+}

@@ -1,0 +1,45 @@
+.about
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    border: 1px solid green;
+    margin: 0 5%;
+
+}
+
+.about > *{
+    flex-basis: 48%;
+    flex-grow: 1;
+}
+
+.aboutText{
+    height: 50vh;
+}
+
+.skills{
+    display: grid;
+    grid-template-columns:50% 50%;
+    grid-template-rows: 50% 50%;
+    align-items: center;
+    gap: 0;
+    padding:  0 2% 0 0;
+    box-sizing: border-box;
+    height: 60vh;
+    min-width: 6cm;
+}
+
+
+img{
+    height: 50%;
+}
+
+.skills >*{
+    height: 100%;
+    display: flex;
+    border:1px solid red;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
