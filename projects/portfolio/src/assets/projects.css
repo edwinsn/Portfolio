@@ -1,0 +1,36 @@
+.projects > div{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 8%;
+}
+
+.projects > div > div {
+    flex-basis: 42%;
+}
+
+.projects > div > div{
+    flex-grow: 1 ;
+}
+
+.projects > div > a{
+    border-radius: 10px;
+    flex-grow: 1 ;
+    flex-basis: 40%;
+    min-width: 7cm;
+}
+
+.projects > div > a > img{
+    width: 100%;
+}
+
+.projectTitle{
+    font-size: 1.4rem;
+    color: rgb(255, 187, 0);
+    font-family: 'Pattaya', sans-serif;
+}
+
+.projectDescription{
+    font-family: 'Roboto';
+    font-size: 1.2rem;
+}

@@ -4,6 +4,7 @@ import './assets/about.css'
 import {MainPage} from './MainPage'
 import Progres from './progress'
 import {About} from './About'
+import {Projects} from './Projects'
 
 function App() {
   console.log("Main Page rendened!")
@@ -17,11 +18,7 @@ function App() {
       <Progres />
       <MainPage />
       <About />
-     <section id="projects">
-        <div>Project1</div>
-        <div>Project2</div>
-        <div>Project3</div>
-      </section>
+      <Projects />
       <section id="contact">Contact</section>
     </div>
   );

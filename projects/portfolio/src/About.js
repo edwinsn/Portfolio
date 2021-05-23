@@ -16,7 +16,7 @@ export let About = function () {
                 a possible solution to the problem we were working, he could quickly
                 implement it and in this way after rehearsing a couple of alternatives we came up with
                 an idea whose result was a logical answer , unfortunately we were wrong.
-                But since then I have thought that the combination of the power of calculation
+                Nonetheless I think that the combination of the power of calculation
                of machines and human creativity can do great things.</p>
                 <p>Dounload Cv</p><br />
             </div>
