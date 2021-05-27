@@ -1,0 +1,111 @@
+::placeholder {
+  color: black;
+  opacity: 0.8;
+  position: relative;
+  right: 0;
+}
+
+:-ms-input-placeholder {
+  color: black;
+}
+
+::-ms-input-placeholder {
+  color: black;
+}   
+
+input {
+   padding-top: 0;
+   padding-left: 0;
+   line-height: 1em;
+   min-height: 0.8cm;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 9%;
+
+}
+
+.contact > *{
+    max-width: 18cm;
+}
+
+
+.contactform{
+    display: flex;
+    height: 60vh;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    padding: 2%;
+}
+
+
+.inputsContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.inputsContainer >*{
+    flex-basis: 45%;
+    column-gap: 9%;
+    min-width: 5cm;
+    flex-grow: 1;
+}
+
+
+.message{
+    display: flex;
+    flex-wrap: wrap;
+    height: 65%;
+    border-radius: 3px;
+}
+.message >*{
+    flex-grow: 1;
+}
+
+.message > textarea{
+    flex-basis: 70%;
+    min-height: 2cm;
+    resize: none;
+    
+}
+
+.message > div{
+    width: 28%;
+    min-width: 4cm;
+
+}
+
+.message > div > input {
+    font-size: 1em;
+    font-family: 'Roboto';
+    height: 33.2%;
+    width: 100%;
+    color: white;
+    background-color: #1858a29c;
+}
+
+.messageSent{
+    justify-content: center;
+    align-items: center;
+    color: black;
+    border:2px solid black;
+    background-color: white;
+    border-radius: 10px;
+    min-height: 1.5cm;
+    display: none;
+}
+.messageSent > *{
+ border:1px solid purple;
+}
+
+.sendForm{
+    background-color: #C52828;
+    border:0;
+    height: 10%;
+    color: white;
+}

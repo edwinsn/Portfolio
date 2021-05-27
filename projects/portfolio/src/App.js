@@ -5,6 +5,7 @@ import {MainPage} from './MainPage'
 import Progres from './progress'
 import {About} from './About'
 import {Projects} from './Projects'
+import { Contact } from './Contact';
 
 function App() {
   console.log("Main Page rendened!")
@@ -19,7 +20,8 @@ function App() {
       <MainPage />
       <About />
       <Projects />
-      <section id="contact">Contact</section>
+      <Contact />
+      
     </div>
   );
 }

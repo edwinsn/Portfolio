@@ -12,7 +12,6 @@ export let MainPage = function () {
                     <a href="#about">About</a>
                     <a href="#proyects">Projects</a>
                     <a href="#contact">Contact</a>
-                    <a href="#skills">Skills</a>
                 </div>
             </header>
             <div>
