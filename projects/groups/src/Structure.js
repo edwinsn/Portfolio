@@ -31,15 +31,24 @@ export default function Structure() {
         <div id="gridContainer"
             className="centered-column"
         >
-            <select id="structure-selector">
-                <option>Grupo</option>
-                <option>Anillo</option>
-                <option>Campo</option>
-            </select>
-            <div id="grid"
-                style={grisStyle}
-            >
-                {squares}
+            <div className="flex">
+                <select id="structure-selector">
+                    <option>Grupo</option>
+                    <option>Anillo</option>
+                    <option>Campo</option>
+                </select>
+                <div id="grid"
+                    style={grisStyle}>
+                    {squares}
+                </div>
+                <div>
+                    <button
+                    onClick={()=>{setOrder(prev=>prev+1)}}
+                    className="changeorder flex centered-column">+</button>
+                    <button
+                    onClick={()=>{setOrder(prev=>prev>1?prev-1:1)}}
+                    id="decrease" className="changeorder flex centered-column">-</button>
+                </div>
             </div>
         </div>
     )

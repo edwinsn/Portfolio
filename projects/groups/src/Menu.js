@@ -9,20 +9,28 @@ export default function Menu() {
     const tableIsComplete = useSelector((state) => state.table.value.isComplete)
     let table = store.getState().table.value.elements
 
-    let inverses = false
+    let inversesRight, inversesLeft = false
     let conmutativity = false
-    let modulativity = false
+    let modulativityRight, modulativityLeft = false
     let asociativity = false
-    let isCyclic = false
-    let generator
+    let isCyclicRight, isCyclicLeft = false
+    let generatorRight, generatorLeft
+    let transposedTable
 
     if (tableIsComplete) {
-        inverses = areInverses(table)
+
+        transposedTable = transpose(table)
+
+        inversesRight = areInverses(table)
+        inversesLeft = areInverses(transposedTable)
         conmutativity = isCommutative(table)
-        modulativity = findE(table) !== false
+        modulativityRight = findE(table) !== false
+        modulativityLeft = findE(transposedTable) !== false
         asociativity = isAssociative(table)
-        generator = cyclic(table)
-        isCyclic = generator !== false
+        generatorRight = cyclic(table)
+        generatorLeft = cyclic(transposedTable)
+        isCyclicRight = generatorRight !== false
+        isCyclicLeft = generatorLeft !== false
     }
 
     return (
@@ -32,20 +40,34 @@ export default function Menu() {
             <p><input checked={asociativity}
                 readOnly
                 type="radio"></input> Asociatividad</p>
-            <p><input checked={modulativity}
+            <p><input checked={modulativityRight || modulativityLeft}
                 readOnly
-                type="radio"></input>Modulatividad</p>
-            <p><input checked={inverses}
+                type="radio"></input>Modulatividad {modulativityRight?"a la derecha ":""}{modulativityLeft?"a la izquierda":""}</p>
+            <p><input checked={inversesRight || inversesLeft}
                 readOnly
-                type="radio"></input>Inversos</p>
-            <h2>Otroas propiedades</h2>
-            <p><input checked={isCyclic}
+                type="radio"></input>Inversos {inversesRight?"A la Derecha":""} { inversesLeft?"A la izquierda":""}</p>
+                {/*depurar tabla*/}
+            <h2>Otras propiedades</h2>
+            <p><input checked={isCyclicRight || isCyclicLeft}
                 readOnly
-                type="radio"></input>Cíclico {generator}</p>
+                type="radio"></input>Cíclico {generatorRight?`a la derecha: ${generatorRight}`:""} {generatorLeft?`a la izquierda: ${generatorLeft}`:""}</p>
             <p><input checked={conmutativity}
                 readOnly
                 type="radio"></input>Abeliano</p>
-            <h2>Subgrupos</h2>
+
         </div>
     )
+}
+
+const transpose = table => {
+
+    let trasposed = []
+
+    for (let row = 0; row < table.length; row++) {
+        for (let column = 0; column < table.length; column++) {
+            trasposed[column] = trasposed[column] || []
+            trasposed[column][row] = table[row][column]
+        }
+    }
+    return trasposed;
 }

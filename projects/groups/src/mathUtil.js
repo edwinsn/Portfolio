@@ -1,7 +1,6 @@
 export function areInverses(M){
     
     let e = findE(M)
-    console.log(e)
     return M.every(  (row)=>  row.some( element=>element===e )  )
 }
 
